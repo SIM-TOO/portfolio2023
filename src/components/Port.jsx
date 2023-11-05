@@ -5,6 +5,9 @@ import image03 from '../assets/img/port00/port00-3.png';
 import image11 from '../assets/img/port01/port01-1.png';
 import image12 from '../assets/img/port01/port01-2.png';
 import image13 from '../assets/img/port01/port01-3.png';
+import image21 from '../assets/img/port02/port02-1.png';
+import image22 from '../assets/img/port02/port02-2.png';
+import image23 from '../assets/img/port02/port02-3.png';
 import ImageSlider from './animations/ImageSlider';
 
 
@@ -31,7 +34,7 @@ const Port = () => {
     },
 
     {
-      img: [],
+      img: [image21, image22, image23],
       text: ["react portfolio"],
       title: "개인프로젝트",
       git: "",
