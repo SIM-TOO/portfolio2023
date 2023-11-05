@@ -8,6 +8,9 @@ import image13 from '../assets/img/port01/port01-3.png';
 import image21 from '../assets/img/port02/port02-1.png';
 import image22 from '../assets/img/port02/port02-2.png';
 import image23 from '../assets/img/port02/port02-3.png';
+import image31 from '../assets/img/port03/port03-1.png';
+import image32 from '../assets/img/port03/port03-2.png';
+import image33 from '../assets/img/port03/port03-3.png';
 import ImageSlider from './animations/ImageSlider';
 
 
@@ -37,15 +40,15 @@ const Port = () => {
       img: [image21, image22, image23],
       text: ["react portfolio"],
       title: "개인프로젝트",
-      git: "",
-      view: "",
+      git: "https://github.com/SIM-TOO/portfolio2023",
+      view: "https://tv.kakao.com/channel/4397165/cliplink/442250975",
 
     },
     {
-      img: [],
+      img: [image31, image32, image33],
       text: ["eyecon-현재진행중"],
       title: "팀프로젝트-현재진행중",
-      git: "",
+      git: "https://github.com/orgs/2023-SMHRD-SW-DataDesign-1/teams/eyecon",
       view: "",
     },
   ];
