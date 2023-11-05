@@ -1,0 +1,138 @@
+// 배경 속성값
+$gradient-color: linear-gradient(to bottom, rgba(19, 19, 19, 0.97) 18.23%, rgba(97, 98, 96, 0.98) 59.9%, #f2f2ec 100%);
+
+.port__inner {
+    background-image: $gradient-color;
+
+    .port__title {
+        margin: 0rem 5rem;
+        position: sticky;
+        top: 120px;
+        height: 5vw;
+        font-size: 4vw;
+        font-weight: 400;
+        font-family: var(--mainKor-font);
+        text-transform: uppercase;
+        color: var(--black400);
+        border-bottom: 0.4vw solid var(--black300);
+
+        @media (max-width: 800px) {
+            margin: 0rem 1rem;
+            margin-bottom: 10vw;
+            font-size: 1rem;
+            height: auto;
+            top: 100px;
+        }
+    }
+
+    .port__wrap {
+        margin: 0rem 5rem;
+
+        @media (max-width: 800px) {
+            margin: 0rem 1rem;
+        }
+
+        .port__item {
+            height: 80vh;
+            @include flex-center;
+            flex-direction: column;
+            position: sticky;
+
+            &.s1 {
+                background-color: var(--subBg100);
+                top: 250px;
+
+                @media (max-width: 800px) {
+                    top: 125px;
+                }
+            }
+
+            &.s2 {
+                background-color: var(--subBg200);
+                top: 270px;
+
+                @media (max-width: 800px) {
+                    top: 145px;
+                }
+            }
+
+            &.s3 {
+                background-color: var(--subBg300);
+                top: 290px;
+
+                @media (max-width: 800px) {
+                    top: 165px;
+                }
+            }
+
+            &.s4 {
+                background-color: var(--subBg400);
+                top: 310px;
+
+                @media (max-width: 800px) {
+                    top: 185px;
+                }
+            }
+
+            .num {
+                font-size: 5vw;
+                line-height: 1;
+                font-weight: 900;
+                font-family: var(--mainNum-font);
+                position: absolute;
+                left: 1vw;
+                top: 1vw;
+
+                @media (max-width: 800px) {
+                    font-size: 80px;
+                    left: 20px;
+                    top: 20px;
+                }
+            }
+
+            .img {
+                width: 40%;
+                border-radius: 15px;
+                box-shadow: 0 150px 500px 100px rgba(255, 255, 255, 0.5);
+            }
+
+            .text {
+                text-align: center;
+                margin-bottom: 1rem;
+
+                >div {
+                    font-size: 3vw;
+                    line-height: 1;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    text-decoration: underline;
+                    font-family: var(--mainEng-font);
+
+                    @media (max-width: 800px) {
+                        font-size: 26px;
+                    }
+                }
+            }
+
+            .title {
+                font-family: var(--mainKor-font);
+                margin-bottom: 1rem;
+            }
+
+            .btn {
+                a {
+                    text-decoration: underline;
+                    text-transform: uppercase;
+                    color: var(--black200);
+                    font-size: 2rem;
+                    transition: all 0.3s;
+                    margin: 0 1rem;
+
+                    &:hover {
+                        color: var(--black);
+                    }
+                }
+            }
+        }
+    }
+}

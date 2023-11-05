@@ -1,0 +1,13 @@
+.cursor-follower {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(243, 243, 243, 0.5);
+    transform: translateX(-50%) translateY(-50%);
+    pointer-events: none;
+    z-index: 9999;
+  }
+  

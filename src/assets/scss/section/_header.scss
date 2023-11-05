@@ -1,0 +1,164 @@
+// 고정된 헤더
+#header {
+    @include position-fixed;
+    z-index: 10000; // z-index 값
+}
+
+// 헤더 내부 컨테이너의 스타일을 설정
+.header__inner {
+    @include flex-between;
+    background-color: rgba(243, 243, 243, 0.2); // 반투명한 배경색을 적용
+    backdrop-filter: blur(15px); // 배경에 블러 효과를 적용
+    padding: 2rem;
+    margin: 2rem 5rem;
+    box-shadow: 0 0 15px rgba(100, 100, 100, 0.5); // 테두리 효과
+
+    // 모바일 화면
+    @media (max-width: 800px) {
+        padding: 1rem;
+        margin: 1rem 1rem;
+    }
+
+    // 로고스타일
+    .header__logo {
+        font-size: 0.9rem;
+        text-align: center;
+        text-transform: uppercase; // 텍스트를 대문자로 표시
+        line-height: 1; // 줄 간격을 설정
+
+        // 로고 아래 텍스트 스타일
+        em {
+            font-size: 10px;
+            display: block; // 요소를 블록으로 표시
+            color: var(--black200);
+        }
+    }
+
+    // 네비게이션 바에 대한 스타일
+    .header__nav {
+
+        // 모바일 화면에서 네비게이션 바의 표시 여부
+        @media (max-width: 800px) {
+            display: none; // 800px 이하에서는 네비게이션을 숨김
+
+            // .show 클래스가 추가될 때 네비게이션 바를 표시
+            &.show {
+                display: block; // 네비게이션 바를 블록 요소로 표시
+
+                // 네비게이션 내부의 리스트 스타일을 정의
+                ul {
+                    display: block; // 리스트를 블록 요소로 표시
+                    position: absolute;
+                    right: 0;
+                    top: 68px;
+                    background-color: rgba(243, 243, 243, 0.2);
+                    backdrop-filter: blur(15px);
+                    z-index: 10000;
+                    min-width: 150px;
+                    padding: 20px 0;
+
+
+                    // 리스트 아이템에 대한 스타일을 정의
+                    li {
+                        display: block; // 리스트 아이템을 블록 요소로 표시
+                        text-align: right; // 텍스트를 오른쪽 정렬
+                        color: var(--black); //글꼴 색상를 설정
+
+                        // 각 네비게이션 링크에 대한 스타일을 정의
+                        a {
+                            display: inline-block; // 링크를 인라인 블록으로 표시
+                            padding: 10px; // 링크의 패딩을 설정
+                        }
+                    }
+                }
+            }
+
+            // 모바일 네비게이션 토글 버튼에 대한 추가 스타일을 정의
+            &.show+.header__nav__mobile span::before {
+                width: 20px;
+            }
+
+            &.show+.header__nav__mobile span::after {
+                width: 20px;
+            }
+        }
+
+        // 데스크탑 화면에서 네비게이션 리스트 아이템의 스타일을 정의
+        li {
+            display: inline; // 리스트 아이템을 인라인 요소로 표시
+
+            // 네비게이션 링크에 대한 스타일을 정의
+            a {
+                text-transform: uppercase; // 텍스트를 대문자로 표시
+                font-size: 14px; // 글꼴 크기를 설정
+                padding: 14px; // 패딩을 추가
+                position: relative; // 상대 위치를 설정
+
+
+                // 호버 효과 전에 숨겨진 요소를 위한 스타일
+                &::before {
+                    content: ''; // 가상 요소의 내용을 비우기
+                    width: calc(100% - 28px); // 너비를 계산하여 설정
+                    height: 1px;
+                    background-color: var(--black);
+                    position: absolute;
+                    left: 14px;
+                    bottom: 10px;
+                    transform: scaleX(0); // X축에 대한 크기를 0으로 설정하여 숨김
+                    transition: all 0.3s; // 0.3초 동안 변화가 일어나도록 설정
+                }
+
+                // 링크에 마우스를 올렸을 때 가상 요소의 호버 효과를 정의
+                &:hover::before {
+                    transform: scaleX(1); // X축에 대한 크기를 1로 설정하여 표시
+                }
+            }
+        }
+    }
+
+    // 모바일 네비게이션 토글 버튼의 스타일을 정의
+    .header__nav__mobile {
+        display: none; // 기본 설정은 none 상태
+        width: 40px;
+        height: 40px;
+        cursor: pointer; // 마우스 커서를 포인터로 설정
+
+        // 800px 이하의 화면 크기에서만 모바일 네비게이션 버튼을 표시
+        @media (max-width: 800px) {
+            display: block; // 모바일 네비게이션 버튼을 블록 요소로 표시
+        }
+
+        // 햄버거 버튼의 스타일을 정의
+        span {
+            display: block; // 스팬을 블록 요소로 표시
+            width: 40px;
+            height: 2px;
+            background-color: var(--black);
+            margin-top: 19px;
+            position: relative; // 상대 위치를 설정
+
+            // 햄버거 버튼의 위쪽 막대에 대한 스타일을 정의
+            &::before {
+                content: "";
+                width: 40px;
+                height: 2px;
+                background-color: var(--black);
+                position: absolute;
+                right: 0;
+                top: 6px;
+                transition: width 0.3s;
+            }
+
+            &::after {
+                content: "";
+                width: 40px;
+                height: 2px;
+                background-color: var(--black);
+                position: absolute;
+                left: 0;
+                bottom: 6px;
+                transition: width 0.3s;
+            }
+        }
+    }
+}
