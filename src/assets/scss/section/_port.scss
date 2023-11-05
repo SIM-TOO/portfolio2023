@@ -15,6 +15,7 @@ $gradient-color: linear-gradient(to bottom, rgba(19, 19, 19, 0.97) 18.23%, rgba(
         text-transform: uppercase;
         color: var(--black400);
         border-bottom: 0.4vw solid var(--black300);
+        
 
         @media (max-width: 800px) {
             margin: 0rem 1rem;
@@ -23,6 +24,7 @@ $gradient-color: linear-gradient(to bottom, rgba(19, 19, 19, 0.97) 18.23%, rgba(
             height: auto;
             top: 100px;
         }
+        cursor: default
     }
 
     .port__wrap {
@@ -31,7 +33,7 @@ $gradient-color: linear-gradient(to bottom, rgba(19, 19, 19, 0.97) 18.23%, rgba(
         @media (max-width: 800px) {
             margin: 0rem 1rem;
         }
-
+        
         .port__item {
             height: 80vh;
             @include flex-center;
@@ -88,6 +90,7 @@ $gradient-color: linear-gradient(to bottom, rgba(19, 19, 19, 0.97) 18.23%, rgba(
                     left: 20px;
                     top: 20px;
                 }
+                cursor: default
             }
 
             .img {
@@ -117,6 +120,7 @@ $gradient-color: linear-gradient(to bottom, rgba(19, 19, 19, 0.97) 18.23%, rgba(
                         font-size: 7vw;
                     }
                 }
+                cursor: default
             }
 
             .title {
@@ -127,6 +131,7 @@ $gradient-color: linear-gradient(to bottom, rgba(19, 19, 19, 0.97) 18.23%, rgba(
                   
                     font-size: 1.5rem;
                 }
+                cursor: default
             }
 
             .btn {

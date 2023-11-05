@@ -18,7 +18,7 @@ const Intro = () => {
   return (
     <section id="intro">
       {/* 인트로 */}
-      <div class="intro__inner">
+      <div className="intro__inner">
         {/* 타이틀 */}
         <IntroTitle texts={titleText} />
         {/* 소개글 */}
