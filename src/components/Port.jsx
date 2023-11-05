@@ -40,8 +40,8 @@ const Port = () => {
     },
     {
       img: [],
-      text: [""],
-      title: "팀프로젝트",
+      text: ["eyecon-현재진행중"],
+      title: "팀프로젝트-현재진행중",
       git: "",
       view: "",
     },
