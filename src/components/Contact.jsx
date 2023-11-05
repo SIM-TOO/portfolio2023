@@ -51,6 +51,10 @@ const Contact = () => {
     };
   }, []);
 
+  const handleClick = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section id="contact" ref={frameRef}>
       <h2 className="contact__title">Contact</h2>
@@ -67,19 +71,16 @@ const Contact = () => {
 
 
         <div className="contact__link">
-          <div className="text">
-            <a href="https://sim-too.tistory.com/" target="_blank" rel="noreferrer">
-              BLOG : SIM_TOO_DEVELOPER</a>
+          <div className="text" onClick={() => handleClick("https://sim-too.tistory.com/")}>
+            BLOG : SIM_TOO_DEVELOPER
           </div>
 
-          <div className="text">
-            <a href="mailto:leesh6172@naver.com" target="_blank" rel="noreferrer">
-              MAIL : leesh6137@naver.com</a>
+          <div className="text" onClick={() => handleClick("mailto:leesh6172@naver.com")}>
+            MAIL : leesh6137@naver.com
           </div>
 
-          <div className="text">
-            <a href="https://blog.naver.com/sim_too" target="_blank" rel="noreferrer">
-              BLOG : SIM_TOO_INVESTMENT</a>
+          <div className="text" onClick={() => handleClick("https://blog.naver.com/sim_too")}>
+            BLOG : SIM_TOO_INVESTMENT
           </div>
         </div>
 
