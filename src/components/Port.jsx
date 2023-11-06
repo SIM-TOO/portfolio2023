@@ -22,6 +22,7 @@ const Port = () => {
     {
       img: [image01, image02, image03],
       title: "Vite PortFolio",
+      link: "./port01",
       text: ["개인프로젝트", "HTML CSS JS VITE"],
       git: "https://github.com/SIM-TOO/vite-portfolio",
       view: "https://tv.kakao.com/channel/4397165/cliplink/442241974",
@@ -39,6 +40,7 @@ const Port = () => {
     {
       img: [image21, image22, image23],
       title: "React PortFolio",
+
       text: ["개인프로젝트", "SCSS JS React"],
       git: "https://github.com/SIM-TOO/portfolio2023",
       view: "https://tv.kakao.com/channel/4397165/cliplink/442250975",
@@ -47,7 +49,7 @@ const Port = () => {
     {
       img: [image31, image32, image33],
       title: "eyecon",
-      text: ["팀프로젝트","Tailwind JS React SpringBoot Flask", "프론트엔드 60%" ],
+      text: ["팀프로젝트", "Tailwind JS React SpringBoot Flask", "프론트엔드 60%"],
       git: "https://github.com/SIM-TOO/eyeconFront",
       view: "",
     },
@@ -66,18 +68,20 @@ const Port = () => {
                 <ImageSlider imgs={port.img} />
               </div>
               <div className="title">
-                <div>{port.title}</div>
+                <div>
+                  <a href={port.link}>{port.title}</a>
+                </div>
               </div>
               <div className="btn">
                 <a href={port.git}>git</a>
                 <a href={port.view}>view</a>
               </div>
-            
-                <div className="text" >{port.text[0]}</div>
-                <div  className="text">{port.text[1]}</div>
-                <div  className="text">{port.text[2]}</div>
-                <div  className="text">{port.text[3]}</div>
-                <div  className="text">{port.text[4]}</div>
+
+              <div className="text" >{port.text[0]}</div>
+              <div className="text">{port.text[1]}</div>
+              <div className="text">{port.text[2]}</div>
+              <div className="text">{port.text[3]}</div>
+              <div className="text">{port.text[4]}</div>
             </article>
           ))}
         </div>
