@@ -8,6 +8,7 @@ const Intro = () => {
   const titleText = ["WELCOME TO MY", "PORTFOLIO"]
   // 소개글 작성
   const introduceText = [
+    "안녕하세요. 이승훈입니다.",
     "배움에는 왕도가 없다는 속담을 신념으로 삼아,",
     "프론트엔드 개발의 길을 묵묵히 걸어가는 개발자입니다.",
     "쉼 없이 새로운 기술을 탐색하고",
@@ -25,6 +26,7 @@ const Intro = () => {
         <div className="intro__text">
           <IntroText texts={introduceText} />
         </div>
+        
       </div>
     </section>
   );

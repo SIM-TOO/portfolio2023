@@ -61,6 +61,10 @@ const Port = () => {
           {portText.map((port, key) => (
             <article className={`port__item s${key + 1}`} key={key}>
               <span className="num">{key + 1}.</span>
+              <div className="btn">
+                <a href={port.git}>git</a>
+                <a href={port.view}>view</a>
+              </div>
               <div className="img">
                 <ImageSlider imgs={port.img} />
               </div>
@@ -72,10 +76,6 @@ const Port = () => {
               <h3 className="title">
                 {port.title}
               </h3>
-              <div className="btn">
-                <a href={port.git}>git</a>
-                <a href={port.view}>view</a>
-              </div>
             </article>
           ))}
         </div>
