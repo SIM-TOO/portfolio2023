@@ -22,7 +22,6 @@ const Port = () => {
     {
       img: [image01, image02, image03],
       title: "Vite PortFolio",
-      link: "./port01",
       text: ["개인프로젝트", "HTML CSS JS VITE"],
       git: "https://github.com/SIM-TOO/vite-portfolio",
       view: "https://tv.kakao.com/channel/4397165/cliplink/442241974",
@@ -69,7 +68,7 @@ const Port = () => {
               </div>
               <div className="title">
                 <div>
-                  <a href={port.link}>{port.title}</a>
+                  {port.title}
                 </div>
               </div>
               <div className="btn">
