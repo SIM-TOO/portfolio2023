@@ -21,34 +21,34 @@ const Port = () => {
   const portText = [
     {
       img: [image01, image02, image03],
-      text: ["vite portfolio"],
-      title: "개인프로젝트",
-      git: "https://github.com/SIM-TOO/vite-portfolio#%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8",
+      title: "Vite PortFolio",
+      text: ["개인프로젝트", "HTML CSS JS VITE"],
+      git: "https://github.com/SIM-TOO/vite-portfolio",
       view: "https://tv.kakao.com/channel/4397165/cliplink/442241974",
 
     },
     {
       img: [image11, image12, image13],
-      text: ["WithDAY"],
-      title: "팀프로젝트",
-      git: "https://github.com/2023-SMHRD-SW-DataDesign-1/CoPebble#-withday-%ED%8C%80%EB%AA%85-%EC%BD%94%EB%94%A9%EC%A1%B0%EC%95%BD%EB%8F%8C-copebble",
+      title: "WithDAY",
+      text: ["팀프로젝트", "HTML CSS JS JAVA", "프론트엔드 40% 백엔드 30%"],
+      git: "https://github.com/SIM-TOO/CoPebble",
       view: "https://tv.kakao.com/channel/4397165/cliplink/440170327",
 
     },
 
     {
       img: [image21, image22, image23],
-      text: ["react portfolio"],
-      title: "개인프로젝트",
+      title: "React PortFolio",
+      text: ["개인프로젝트", "SCSS JS React"],
       git: "https://github.com/SIM-TOO/portfolio2023",
       view: "https://tv.kakao.com/channel/4397165/cliplink/442250975",
 
     },
     {
       img: [image31, image32, image33],
-      text: ["eyecon-현재진행중"],
-      title: "팀프로젝트-현재진행중",
-      git: "https://github.com/orgs/2023-SMHRD-SW-DataDesign-1/teams/eyecon",
+      title: "eyecon",
+      text: ["팀프로젝트","Tailwind JS React SpringBoot Flask", "프론트엔드 60%" ],
+      git: "https://github.com/SIM-TOO/eyeconFront",
       view: "",
     },
   ];
@@ -61,21 +61,23 @@ const Port = () => {
           {portText.map((port, key) => (
             <article className={`port__item s${key + 1}`} key={key}>
               <span className="num">{key + 1}.</span>
+
+              <div className="img">
+                <ImageSlider imgs={port.img} />
+              </div>
+              <div className="title">
+                <div>{port.title}</div>
+              </div>
               <div className="btn">
                 <a href={port.git}>git</a>
                 <a href={port.view}>view</a>
               </div>
-              <div className="img">
-                <ImageSlider imgs={port.img} />
-              </div>
-              <div className="text">
-                <div>{port.text[0]}</div>
-                <div>{port.text[1]}</div>
-                <div>{port.text[2]}</div>
-              </div>
-              <h3 className="title">
-                {port.title}
-              </h3>
+            
+                <div className="text" >{port.text[0]}</div>
+                <div  className="text">{port.text[1]}</div>
+                <div  className="text">{port.text[2]}</div>
+                <div  className="text">{port.text[3]}</div>
+                <div  className="text">{port.text[4]}</div>
             </article>
           ))}
         </div>

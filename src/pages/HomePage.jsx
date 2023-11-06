@@ -10,14 +10,12 @@ import Main from "../components/Main";
 
 // 기능
 import CursorFollower from '../components/animations/CursorFollower';
-import WaveEffect from '../components/animations/WaveEffect';
 
 const HomePage = () => {
     return (
         <>
             {/* 마우스 효과 */}
             <CursorFollower />
-            <WaveEffect />
 
             <Skip />
             <Header />
