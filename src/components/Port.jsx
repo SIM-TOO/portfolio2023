@@ -24,7 +24,7 @@ const Port = () => {
       title: "Vite PortFolio",
       text: ["개인프로젝트", "HTML CSS JS VITE"],
       git: "https://github.com/SIM-TOO/vite-portfolio",
-      view: "https://tv.kakao.com/channel/4397165/cliplink/442241974",
+      blog: "https://sim-too.tistory.com/113",
 
     },
     {
@@ -32,7 +32,7 @@ const Port = () => {
       title: "WithDAY",
       text: ["팀프로젝트", "HTML CSS JS JAVA", "프론트엔드 40% 백엔드 30%"],
       git: "https://github.com/SIM-TOO/CoPebble",
-      view: "https://tv.kakao.com/channel/4397165/cliplink/440170327",
+      blog: "https://sim-too.tistory.com/94",
 
     },
 
@@ -42,7 +42,7 @@ const Port = () => {
 
       text: ["개인프로젝트", "SCSS JS React"],
       git: "https://github.com/SIM-TOO/portfolio2023",
-      view: "https://tv.kakao.com/channel/4397165/cliplink/442250975",
+      blog: "https://sim-too.tistory.com/122",
 
     },
     {
@@ -50,7 +50,7 @@ const Port = () => {
       title: "eyecon",
       text: ["팀프로젝트", "Tailwind JS React SpringBoot Flask", "프론트엔드 60%"],
       git: "https://github.com/SIM-TOO/eyeconFront",
-      view: "",
+      blog: "",
     },
   ];
 
@@ -72,8 +72,8 @@ const Port = () => {
                 </div>
               </div>
               <div className="btn">
-                <a href={port.git}>git</a>
-                <a href={port.view}>view</a>
+                <a href={port.git}>Git</a>
+                <a href={port.blog}>Blog</a>
               </div>
 
               <div className="text" >{port.text[0]}</div>
