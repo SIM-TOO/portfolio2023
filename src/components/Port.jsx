@@ -50,7 +50,7 @@ const Port = () => {
       title: "eyecon",
       text: ["팀프로젝트", "Tailwind JS React SpringBoot Flask", "프론트엔드 60%"],
       git: "https://github.com/SIM-TOO/eyeconFront",
-      blog: "",
+      blog: "https://sim-too.tistory.com/121",
     },
   ];
 
